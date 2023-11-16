@@ -204,5 +204,13 @@ expect($value)
     ->not->toBe(4);
 ```
 
+## Migration
+https://pestphp.com/docs/migrating-from-phpunit-guide
+`composer require pestphp/pest-plugin-drift --dev`
+
+```
+./vendor/bin/pest --drift
+```
+
 # Part 3
 
