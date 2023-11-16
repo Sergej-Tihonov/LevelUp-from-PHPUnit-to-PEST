@@ -1,16 +1,20 @@
 # LevelUp-from-PHPUnit-to-PEST
 
 # Websites
-https://phpunit.de/
-https://github.com/sebastianbergmann/phpunit
-https://packagist.org/packages/phpunit/phpunit
+- https://phpunit.de/
+- https://github.com/sebastianbergmann/phpunit
+- https://packagist.org/packages/phpunit/phpunit
 
-https://pestphp.com/
-https://github.com/pestphp/pest
-https://packagist.org/packages/pestphp/pest
+---
 
-https://jestjs.io/
-https://github.com/jestjs/jest
+- https://pestphp.com/
+- https://github.com/pestphp/pest
+- https://packagist.org/packages/pestphp/pest
+
+---
+
+- https://jestjs.io/
+- https://github.com/jestjs/jest
 
 
 # Part 1
@@ -27,8 +31,8 @@ https://github.com/jestjs/jest
 
 ## Filtering
 
-https://docs.phpunit.de/en/10.4/textui.html#selection
-https://pestphp.com/docs/filtering-tests
+- https://docs.phpunit.de/en/10.4/textui.html#selection
+- https://pestphp.com/docs/filtering-tests
 ```
 ./vendor/bin/pest --bail
 ./vendor/bin/pest --retry
@@ -63,9 +67,9 @@ Parallel
 ```
 
 ## Code coverage
-https://docs.phpunit.de/en/10.4/code-coverage.html
-https://pestphp.com/docs/test-coverage
-https://pestphp.com/docs/cli-api-reference#content-code-coverage
+- https://docs.phpunit.de/en/10.4/code-coverage.html
+- https://pestphp.com/docs/test-coverage
+- https://pestphp.com/docs/cli-api-reference#content-code-coverage
 
 ```
 ./vendor/bin/phpunit --help
@@ -86,8 +90,8 @@ https://pestphp.com/docs/type-coverage
 ---
 
 ## Installation & Setup
-https://pestphp.com/docs/installation
-https://pestphp.com/docs/editor-setup
+- https://pestphp.com/docs/installation
+- https://pestphp.com/docs/editor-setup
 `./vendor/bin/pest --init`
 
 ```
@@ -125,9 +129,9 @@ it('has home')->todo();
 
 ## Filtering 2
 
-https://docs.phpunit.de/en/10.4/textui.html#selection
-https://pestphp.com/docs/filtering-tests
-https://pestphp.com/docs/grouping-tests
+- https://docs.phpunit.de/en/10.4/textui.html#selection
+- https://pestphp.com/docs/filtering-tests
+- https://pestphp.com/docs/grouping-tests
 
 ```
 ->group('feature');
@@ -214,3 +218,29 @@ https://pestphp.com/docs/migrating-from-phpunit-guide
 
 # Part 3
 
+## Architecture Tests
+https://pestphp.com/docs/arch-testing
+
+```
+test('app')
+    ->expect('App\Models')
+    ->toBeClasses();
+```
+
+https://pestphp.com/docs/snapshot-testing
+```
+it('has a contact page', function () {
+    $response = $this->get('/contact');
+ 
+    expect($response)->toMatchSnapshot();
+});
+```
+
+## Videos Nuno Maduro
+PEST v1
+- https://www.youtube.com/watch?v=MqiGA34ZrQU&ab_channel=GrUSP
+- https://www.youtube.com/watch?v=A8uOxiSTvVQ&ab_channel=LaravelPodcast
+
+PEST v2
+- https://www.youtube.com/watch?v=9EGPo_enEc8&ab_channel=NunoMaduro
+- https://www.youtube.com/watch?v=AkDMDHAs09U&ab_channel=Laravel
