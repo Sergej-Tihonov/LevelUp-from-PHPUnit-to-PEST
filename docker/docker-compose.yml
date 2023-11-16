@@ -10,6 +10,7 @@ services:
     working_dir: /var/www/laravel
     volumes:
       - ../:/var/www/laravel
+      - ./php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini:ro
       - ./php-fpm/xphp.ini:/usr/local/etc/php/conf.d/xphp.ini:ro
     ports:
       - "${PHP_PORT}:9000"

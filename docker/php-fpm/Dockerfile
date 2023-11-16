@@ -17,7 +17,7 @@ RUN apt-get update -yqq \
 
 # Install laravel necessary packages
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions pdo_mysql bcmath zip pcntl
+RUN install-php-extensions pdo_mysql bcmath zip pcntl xdebug
 
 # Install composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
