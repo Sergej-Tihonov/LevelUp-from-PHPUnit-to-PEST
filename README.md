@@ -138,6 +138,71 @@ https://pestphp.com/docs/grouping-tests
 
 # Part 2
 
+## Hooks
+https://pestphp.com/docs/hooks
+
+- beforeEach / after Each
+- beforeAll / afterAll
+
+PHPStorm live templates (custom)
+- before
+- after
+- pest_freeze
+
+## Describe blocks
+
+https://pestphp.com/docs/pest-spicy-summer-release#content-describe-blocks
+```
+describe('guest', function () {
+    test('can login', function () {
+        // ...
+    });
+ 
+    // ...
+});
+```
+
+## Exceptions
+https://pestphp.com/docs/expectations#content-tothrow
+```
+expect(fn() => throw new Exception('Something happened.'))
+  ->toThrow(Exception::class);
+expect(fn() => throw new Exception('Something happened.'))
+  ->toThrow('Something happened.');
+expect(fn() => throw new Exception('Something happened.'))
+  ->toThrow(Exception::class, 'Something happened.');
+expect(fn() => throw new Exception('Something happened.'))
+  ->toThrow(new Exception('Something happened.'));
+```
+
+## Datasets
+https://pestphp.com/docs/datasets
+```
+it('has emails', function (string $email) {
+    expect($email)->not->toBeEmpty();
+})->with(['first@example.com', 'other@example.com']);
+```
+
+## Expectations
+https://pestphp.com/docs/expectations
+
+```
+test('sum', function () {
+    $value = sum(1, 2);
+ 
+    expect($value)->toBe(3); // Assert that the value is 3...
+});
+
+expect($value)
+    ->toBeInt()
+    ->toBe(3);
+
+expect($value)
+    ->toBeInt()
+    ->toBe(3)
+    ->not->toBeString()
+    ->not->toBe(4);
+```
 
 # Part 3
 
